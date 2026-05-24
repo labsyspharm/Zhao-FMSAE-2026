@@ -15,7 +15,7 @@ Table of Contents
 General Information
 ------------------
 ### Compositional and interpretable representation of histology using AI foundation models and sparse autoencoders <Publication or Dataset Title>   
-**Authors:** Ziyuan Zhao*, Zoltan Maliga*, Emmanuel C. Ogbonna, Soheil R. Talemi, Shannon Coy, Andréanne Gagné, Kapongo Lumamba, Isaac H. Solomon, Angela Shih, Sandro Santagata, Adrie J.C. Steyn, Threnesan Naidoo†, Peter K. Sorger† 
+**Authors:** Ziyuan Zhao*, Zoltan Maliga*, Emmanuel C. Ogbonna, Soheil R. Talemi, Shannon Coy, Andréanne Gagné, Kapongo Lumamba, Isaac H. Solomon, Sandro Santagata, Adrie J.C. Steyn, Threnesan Naidoo†, Peter K. Sorger† 
   
 *Co-first Authors: Z.Z., Z.M.
 
