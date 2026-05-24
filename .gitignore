@@ -1,3 +1,6 @@
+# Specific to this repo
+resources/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
