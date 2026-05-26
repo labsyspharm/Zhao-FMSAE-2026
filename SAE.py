@@ -6,7 +6,7 @@ from torch.utils.data import TensorDataset, DataLoader
 from torch.optim import Adam
 from tqdm import tqdm
 from sklearn.base import BaseEstimator, TransformerMixin
-from sklearn.utils.validation import check_is_fitted
+from sklearn.utils.validation import check_is_fitted, validate_data
 from sklearn.utils import check_random_state
 import numpy as np
 import scipy.sparse as sp
@@ -211,7 +211,7 @@ class SparseAutoencoder(TransformerMixin, BaseEstimator):
     def fit(self, X, y=None, 
             verbose: int | bool = False):
         self.random_state_ = check_random_state(self.random_state)
-        X = self._validate_data(X, accept_sparse=False)
+        X = validate_data(self, X, accept_sparse=False)
         assert len(X.shape) == 2 # expect X shape = B x d_emb 
         self.embed_dim_ = X.shape[1] * self.expansion_factor
         self.model_ = SimpleAutoencoder(input_dim=X.shape[1], 
@@ -235,7 +235,7 @@ class SparseAutoencoder(TransformerMixin, BaseEstimator):
         
     def transform(self, X, column_keep_indices=None, device=None):
         check_is_fitted(self)
-        X = self._validate_data(X, accept_sparse=False, reset=False)
+        X = validate_data(self, X, accept_sparse=False, reset=False)
         if device is None:
             device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.model_.to(device)

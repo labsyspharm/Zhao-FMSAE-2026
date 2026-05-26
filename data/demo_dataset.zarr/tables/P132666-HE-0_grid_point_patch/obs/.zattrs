@@ -1,0 +1,15 @@
+{
+    "_index": "_index",
+    "column-order": [
+        "instance_id",
+        "region",
+        "image",
+        "is_tissue",
+        "ymin",
+        "ymax",
+        "xmin",
+        "xmax"
+    ],
+    "encoding-type": "dataframe",
+    "encoding-version": "0.2.0"
+}

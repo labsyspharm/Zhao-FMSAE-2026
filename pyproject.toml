@@ -8,13 +8,17 @@ license = { text = "MIT" }
 dependencies = [
     "matplotlib",
     "zarr",
-    "spatialdata[extra]",
     "numpy",
     "tqdm",
-    "joblib",
     "pandas",
     "torch",
+    "spatialdata[extra]==0.4.0",
+    "notebook>=7.5.6",
 ]
+
+# [build-system]
+# requires = ["setuptools>=42", "wheel"]
+# build-backend = "setuptools.build_meta"
 
 [tool.uv.sources]
 torch = { index = "pytorch" }
@@ -22,3 +26,6 @@ torch = { index = "pytorch" }
 [[tool.uv.index]]
 name = "pytorch"
 url = "https://download.pytorch.org/whl/cpu"
+
+[tool.uv]
+index-strategy = "unsafe-best-match"

@@ -1,0 +1,1184 @@
+{
+    "metadata": {
+        ".zattrs": {
+            "spatialdata_attrs": {
+                "spatialdata_software_version": "0.4.0",
+                "version": "0.1"
+            }
+        },
+        ".zgroup": {
+            "zarr_format": 2
+        },
+        "images/.zgroup": {
+            "zarr_format": 2
+        },
+        "images/P132666-HE-0/.zattrs": {
+            "multiscales": [
+                {
+                    "axes": [
+                        {
+                            "name": "c",
+                            "type": "channel"
+                        },
+                        {
+                            "name": "y",
+                            "type": "space"
+                        },
+                        {
+                            "name": "x",
+                            "type": "space"
+                        }
+                    ],
+                    "coordinateTransformations": [
+                        {
+                            "input": {
+                                "axes": [
+                                    {
+                                        "name": "c",
+                                        "type": "channel"
+                                    },
+                                    {
+                                        "name": "y",
+                                        "type": "space",
+                                        "unit": "unit"
+                                    },
+                                    {
+                                        "name": "x",
+                                        "type": "space",
+                                        "unit": "unit"
+                                    }
+                                ],
+                                "name": "cyx"
+                            },
+                            "output": {
+                                "axes": [
+                                    {
+                                        "name": "c",
+                                        "type": "channel"
+                                    },
+                                    {
+                                        "name": "y",
+                                        "type": "space",
+                                        "unit": "unit"
+                                    },
+                                    {
+                                        "name": "x",
+                                        "type": "space",
+                                        "unit": "unit"
+                                    }
+                                ],
+                                "name": "global"
+                            },
+                            "transformations": [
+                                {
+                                    "input": {
+                                        "axes": [
+                                            {
+                                                "name": "c",
+                                                "type": "channel"
+                                            },
+                                            {
+                                                "name": "y",
+                                                "type": "space",
+                                                "unit": "unit"
+                                            },
+                                            {
+                                                "name": "x",
+                                                "type": "space",
+                                                "unit": "unit"
+                                            }
+                                        ],
+                                        "name": "cyx"
+                                    },
+                                    "output": {
+                                        "axes": [
+                                            {
+                                                "name": "c",
+                                                "type": "channel"
+                                            },
+                                            {
+                                                "name": "y",
+                                                "type": "space",
+                                                "unit": "unit"
+                                            },
+                                            {
+                                                "name": "x",
+                                                "type": "space",
+                                                "unit": "unit"
+                                            }
+                                        ],
+                                        "name": "global"
+                                    },
+                                    "scale": [
+                                        1.0,
+                                        16.001984843016963,
+                                        16.0
+                                    ],
+                                    "type": "scale"
+                                },
+                                {
+                                    "input": {
+                                        "axes": [
+                                            {
+                                                "name": "c",
+                                                "type": "channel"
+                                            },
+                                            {
+                                                "name": "y",
+                                                "type": "space",
+                                                "unit": "unit"
+                                            },
+                                            {
+                                                "name": "x",
+                                                "type": "space",
+                                                "unit": "unit"
+                                            }
+                                        ],
+                                        "name": "cyx"
+                                    },
+                                    "output": {
+                                        "axes": [
+                                            {
+                                                "name": "c",
+                                                "type": "channel"
+                                            },
+                                            {
+                                                "name": "y",
+                                                "type": "space",
+                                                "unit": "unit"
+                                            },
+                                            {
+                                                "name": "x",
+                                                "type": "space",
+                                                "unit": "unit"
+                                            }
+                                        ],
+                                        "name": "global"
+                                    },
+                                    "type": "identity"
+                                }
+                            ],
+                            "type": "sequence"
+                        },
+                        {
+                            "input": {
+                                "axes": [
+                                    {
+                                        "name": "c",
+                                        "type": "channel"
+                                    },
+                                    {
+                                        "name": "y",
+                                        "type": "space",
+                                        "unit": "unit"
+                                    },
+                                    {
+                                        "name": "x",
+                                        "type": "space",
+                                        "unit": "unit"
+                                    }
+                                ],
+                                "name": "cyx"
+                            },
+                            "output": {
+                                "axes": [
+                                    {
+                                        "name": "c",
+                                        "type": "channel"
+                                    },
+                                    {
+                                        "name": "y",
+                                        "type": "space",
+                                        "unit": "unit"
+                                    },
+                                    {
+                                        "name": "x",
+                                        "type": "space",
+                                        "unit": "unit"
+                                    }
+                                ],
+                                "name": "P132666-HE-0"
+                            },
+                            "transformations": [
+                                {
+                                    "input": {
+                                        "axes": [
+                                            {
+                                                "name": "c",
+                                                "type": "channel"
+                                            },
+                                            {
+                                                "name": "y",
+                                                "type": "space",
+                                                "unit": "unit"
+                                            },
+                                            {
+                                                "name": "x",
+                                                "type": "space",
+                                                "unit": "unit"
+                                            }
+                                        ],
+                                        "name": "cyx"
+                                    },
+                                    "output": {
+                                        "axes": [
+                                            {
+                                                "name": "c",
+                                                "type": "channel"
+                                            },
+                                            {
+                                                "name": "y",
+                                                "type": "space",
+                                                "unit": "unit"
+                                            },
+                                            {
+                                                "name": "x",
+                                                "type": "space",
+                                                "unit": "unit"
+                                            }
+                                        ],
+                                        "name": "global"
+                                    },
+                                    "scale": [
+                                        1.0,
+                                        16.001984843016963,
+                                        16.0
+                                    ],
+                                    "type": "scale"
+                                },
+                                {
+                                    "input": {
+                                        "axes": [
+                                            {
+                                                "name": "c",
+                                                "type": "channel"
+                                            },
+                                            {
+                                                "name": "y",
+                                                "type": "space",
+                                                "unit": "unit"
+                                            },
+                                            {
+                                                "name": "x",
+                                                "type": "space",
+                                                "unit": "unit"
+                                            }
+                                        ],
+                                        "name": "cyx"
+                                    },
+                                    "output": {
+                                        "axes": [
+                                            {
+                                                "name": "c",
+                                                "type": "channel"
+                                            },
+                                            {
+                                                "name": "y",
+                                                "type": "space",
+                                                "unit": "unit"
+                                            },
+                                            {
+                                                "name": "x",
+                                                "type": "space",
+                                                "unit": "unit"
+                                            }
+                                        ],
+                                        "name": "global"
+                                    },
+                                    "type": "identity"
+                                }
+                            ],
+                            "type": "sequence"
+                        }
+                    ],
+                    "datasets": [
+                        {
+                            "coordinateTransformations": [
+                                {
+                                    "scale": [
+                                        1.0,
+                                        1.0,
+                                        1.0
+                                    ],
+                                    "type": "scale"
+                                }
+                            ],
+                            "path": "0"
+                        },
+                        {
+                            "coordinateTransformations": [
+                                {
+                                    "scale": [
+                                        1.0,
+                                        2.0,
+                                        2.000593471810089
+                                    ],
+                                    "type": "scale"
+                                }
+                            ],
+                            "path": "1"
+                        },
+                        {
+                            "coordinateTransformations": [
+                                {
+                                    "scale": [
+                                        1.0,
+                                        4.0014440433213,
+                                        4.003562945368171
+                                    ],
+                                    "type": "scale"
+                                }
+                            ],
+                            "path": "2"
+                        },
+                        {
+                            "coordinateTransformations": [
+                                {
+                                    "scale": [
+                                        1.0,
+                                        8.008670520231213,
+                                        8.007125890736342
+                                    ],
+                                    "type": "scale"
+                                }
+                            ],
+                            "path": "3"
+                        },
+                        {
+                            "coordinateTransformations": [
+                                {
+                                    "scale": [
+                                        1.0,
+                                        16.017341040462426,
+                                        16.052380952380954
+                                    ],
+                                    "type": "scale"
+                                }
+                            ],
+                            "path": "4"
+                        }
+                    ],
+                    "metadata": {
+                        "omero": {
+                            "channels": [
+                                {
+                                    "label": "r"
+                                },
+                                {
+                                    "label": "g"
+                                },
+                                {
+                                    "label": "b"
+                                }
+                            ]
+                        }
+                    },
+                    "name": "/images/P132666-HE-0",
+                    "version": "0.4-dev-spatialdata"
+                }
+            ],
+            "omero": {
+                "channels": [
+                    {
+                        "label": "r"
+                    },
+                    {
+                        "label": "g"
+                    },
+                    {
+                        "label": "b"
+                    }
+                ]
+            },
+            "spatialdata_attrs": {
+                "version": "0.2"
+            }
+        },
+        "images/P132666-HE-0/.zgroup": {
+            "zarr_format": 2
+        },
+        "images/P132666-HE-0/0/.zarray": {
+            "chunks": [
+                3,
+                1024,
+                1024
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dimension_separator": "/",
+            "dtype": "|u1",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                3,
+                5542,
+                3371
+            ],
+            "zarr_format": 2
+        },
+        "images/P132666-HE-0/1/.zarray": {
+            "chunks": [
+                3,
+                1024,
+                1024
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dimension_separator": "/",
+            "dtype": "|u1",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                3,
+                2771,
+                1685
+            ],
+            "zarr_format": 2
+        },
+        "images/P132666-HE-0/2/.zarray": {
+            "chunks": [
+                3,
+                1024,
+                842
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dimension_separator": "/",
+            "dtype": "|u1",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                3,
+                1385,
+                842
+            ],
+            "zarr_format": 2
+        },
+        "images/P132666-HE-0/3/.zarray": {
+            "chunks": [
+                3,
+                692,
+                421
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dimension_separator": "/",
+            "dtype": "|u1",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                3,
+                692,
+                421
+            ],
+            "zarr_format": 2
+        },
+        "images/P132666-HE-0/4/.zarray": {
+            "chunks": [
+                3,
+                346,
+                210
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dimension_separator": "/",
+            "dtype": "|u1",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                3,
+                346,
+                210
+            ],
+            "zarr_format": 2
+        },
+        "points/.zgroup": {
+            "zarr_format": 2
+        },
+        "points/P132666-HE-0_grid_point/.zattrs": {
+            "axes": [
+                "x",
+                "y"
+            ],
+            "coordinateTransformations": [
+                {
+                    "input": {
+                        "axes": [
+                            {
+                                "name": "x",
+                                "type": "space",
+                                "unit": "unit"
+                            },
+                            {
+                                "name": "y",
+                                "type": "space",
+                                "unit": "unit"
+                            }
+                        ],
+                        "name": "xy"
+                    },
+                    "output": {
+                        "axes": [
+                            {
+                                "name": "x",
+                                "type": "space",
+                                "unit": "unit"
+                            },
+                            {
+                                "name": "y",
+                                "type": "space",
+                                "unit": "unit"
+                            }
+                        ],
+                        "name": "global"
+                    },
+                    "type": "identity"
+                },
+                {
+                    "input": {
+                        "axes": [
+                            {
+                                "name": "x",
+                                "type": "space",
+                                "unit": "unit"
+                            },
+                            {
+                                "name": "y",
+                                "type": "space",
+                                "unit": "unit"
+                            }
+                        ],
+                        "name": "xy"
+                    },
+                    "output": {
+                        "axes": [
+                            {
+                                "name": "x",
+                                "type": "space",
+                                "unit": "unit"
+                            },
+                            {
+                                "name": "y",
+                                "type": "space",
+                                "unit": "unit"
+                            }
+                        ],
+                        "name": "P132666-HE-0"
+                    },
+                    "type": "identity"
+                }
+            ],
+            "encoding-type": "ngff:points",
+            "spatialdata_attrs": {
+                "version": "0.1"
+            }
+        },
+        "points/P132666-HE-0_grid_point/.zgroup": {
+            "zarr_format": 2
+        },
+        "shapes/.zgroup": {
+            "zarr_format": 2
+        },
+        "shapes/P132666-HE-0_grid_point_bbox/.zattrs": {
+            "axes": [
+                "x",
+                "y"
+            ],
+            "coordinateTransformations": [
+                {
+                    "input": {
+                        "axes": [
+                            {
+                                "name": "x",
+                                "type": "space",
+                                "unit": "unit"
+                            },
+                            {
+                                "name": "y",
+                                "type": "space",
+                                "unit": "unit"
+                            }
+                        ],
+                        "name": "xy"
+                    },
+                    "output": {
+                        "axes": [
+                            {
+                                "name": "x",
+                                "type": "space",
+                                "unit": "unit"
+                            },
+                            {
+                                "name": "y",
+                                "type": "space",
+                                "unit": "unit"
+                            }
+                        ],
+                        "name": "global"
+                    },
+                    "type": "identity"
+                },
+                {
+                    "input": {
+                        "axes": [
+                            {
+                                "name": "x",
+                                "type": "space",
+                                "unit": "unit"
+                            },
+                            {
+                                "name": "y",
+                                "type": "space",
+                                "unit": "unit"
+                            }
+                        ],
+                        "name": "xy"
+                    },
+                    "output": {
+                        "axes": [
+                            {
+                                "name": "x",
+                                "type": "space",
+                                "unit": "unit"
+                            },
+                            {
+                                "name": "y",
+                                "type": "space",
+                                "unit": "unit"
+                            }
+                        ],
+                        "name": "P132666-HE-0"
+                    },
+                    "type": "identity"
+                }
+            ],
+            "encoding-type": "ngff:shapes",
+            "spatialdata_attrs": {
+                "version": "0.2"
+            }
+        },
+        "shapes/P132666-HE-0_grid_point_bbox/.zgroup": {
+            "zarr_format": 2
+        },
+        "tables/.zgroup": {
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/.zattrs": {
+            "encoding-type": "anndata",
+            "encoding-version": "0.1.0",
+            "instance_key": "instance_id",
+            "region": "P132666-HE-0_grid_point_bbox",
+            "region_key": "region",
+            "spatialdata-encoding-type": "ngff:regions_table",
+            "version": "0.1"
+        },
+        "tables/P132666-HE-0_grid_point_patch/.zgroup": {
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/X/.zarray": {
+            "chunks": [
+                17947,
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dimension_separator": "/",
+            "dtype": "<f8",
+            "fill_value": 0.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                35894,
+                1
+            ],
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/X/.zattrs": {
+            "encoding-type": "array",
+            "encoding-version": "0.2.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/layers/.zattrs": {
+            "encoding-type": "dict",
+            "encoding-version": "0.1.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/layers/.zgroup": {
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/.zattrs": {
+            "_index": "_index",
+            "column-order": [
+                "instance_id",
+                "region",
+                "image",
+                "is_tissue",
+                "ymin",
+                "ymax",
+                "xmin",
+                "xmax"
+            ],
+            "encoding-type": "dataframe",
+            "encoding-version": "0.2.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/.zgroup": {
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/_index/.zarray": {
+            "chunks": [
+                17947
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dimension_separator": "/",
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-utf8"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                35894
+            ],
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/_index/.zattrs": {
+            "encoding-type": "string-array",
+            "encoding-version": "0.2.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/image/.zarray": {
+            "chunks": [
+                17947
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dimension_separator": "/",
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-utf8"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                35894
+            ],
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/image/.zattrs": {
+            "encoding-type": "string-array",
+            "encoding-version": "0.2.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/instance_id/.zarray": {
+            "chunks": [
+                17947
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dimension_separator": "/",
+            "dtype": "<i8",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                35894
+            ],
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/instance_id/.zattrs": {
+            "encoding-type": "array",
+            "encoding-version": "0.2.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/is_tissue/.zarray": {
+            "chunks": [
+                35894
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dimension_separator": "/",
+            "dtype": "|b1",
+            "fill_value": false,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                35894
+            ],
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/is_tissue/.zattrs": {
+            "encoding-type": "array",
+            "encoding-version": "0.2.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/region/.zattrs": {
+            "encoding-type": "categorical",
+            "encoding-version": "0.2.0",
+            "ordered": false
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/region/.zgroup": {
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/region/categories/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dimension_separator": "/",
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-utf8"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/region/categories/.zattrs": {
+            "encoding-type": "string-array",
+            "encoding-version": "0.2.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/region/codes/.zarray": {
+            "chunks": [
+                35894
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dimension_separator": "/",
+            "dtype": "|i1",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                35894
+            ],
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/region/codes/.zattrs": {
+            "encoding-type": "array",
+            "encoding-version": "0.2.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/xmax/.zarray": {
+            "chunks": [
+                17947
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dimension_separator": "/",
+            "dtype": "<i8",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                35894
+            ],
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/xmax/.zattrs": {
+            "encoding-type": "array",
+            "encoding-version": "0.2.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/xmin/.zarray": {
+            "chunks": [
+                17947
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dimension_separator": "/",
+            "dtype": "<i8",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                35894
+            ],
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/xmin/.zattrs": {
+            "encoding-type": "array",
+            "encoding-version": "0.2.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/ymax/.zarray": {
+            "chunks": [
+                17947
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dimension_separator": "/",
+            "dtype": "<i8",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                35894
+            ],
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/ymax/.zattrs": {
+            "encoding-type": "array",
+            "encoding-version": "0.2.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/ymin/.zarray": {
+            "chunks": [
+                17947
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dimension_separator": "/",
+            "dtype": "<i8",
+            "fill_value": 0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                35894
+            ],
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/obs/ymin/.zattrs": {
+            "encoding-type": "array",
+            "encoding-version": "0.2.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/obsm/.zattrs": {
+            "encoding-type": "dict",
+            "encoding-version": "0.1.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/obsm/.zgroup": {
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/obsm/UNI_embedding/.zarray": {
+            "chunks": [
+                2244,
+                64
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dimension_separator": "/",
+            "dtype": "<f8",
+            "fill_value": 0.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                35894,
+                1024
+            ],
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/obsm/UNI_embedding/.zattrs": {
+            "encoding-type": "array",
+            "encoding-version": "0.2.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/obsp/.zattrs": {
+            "encoding-type": "dict",
+            "encoding-version": "0.1.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/obsp/.zgroup": {
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/uns/.zattrs": {
+            "encoding-type": "dict",
+            "encoding-version": "0.1.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/uns/.zgroup": {
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/uns/spatialdata_attrs/.zattrs": {
+            "encoding-type": "dict",
+            "encoding-version": "0.1.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/uns/spatialdata_attrs/.zgroup": {
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/uns/spatialdata_attrs/instance_key/.zarray": {
+            "chunks": [],
+            "compressor": null,
+            "dimension_separator": "/",
+            "dtype": "<U11",
+            "fill_value": "",
+            "filters": null,
+            "order": "C",
+            "shape": [],
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/uns/spatialdata_attrs/instance_key/.zattrs": {
+            "encoding-type": "string",
+            "encoding-version": "0.2.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/uns/spatialdata_attrs/region/.zarray": {
+            "chunks": [],
+            "compressor": null,
+            "dimension_separator": "/",
+            "dtype": "<U28",
+            "fill_value": "",
+            "filters": null,
+            "order": "C",
+            "shape": [],
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/uns/spatialdata_attrs/region/.zattrs": {
+            "encoding-type": "string",
+            "encoding-version": "0.2.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/uns/spatialdata_attrs/region_key/.zarray": {
+            "chunks": [],
+            "compressor": null,
+            "dimension_separator": "/",
+            "dtype": "<U6",
+            "fill_value": "",
+            "filters": null,
+            "order": "C",
+            "shape": [],
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/uns/spatialdata_attrs/region_key/.zattrs": {
+            "encoding-type": "string",
+            "encoding-version": "0.2.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/var/.zattrs": {
+            "_index": "_index",
+            "column-order": [],
+            "encoding-type": "dataframe",
+            "encoding-version": "0.2.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/var/.zgroup": {
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/var/_index/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dimension_separator": "/",
+            "dtype": "|O",
+            "fill_value": 0,
+            "filters": [
+                {
+                    "id": "vlen-utf8"
+                }
+            ],
+            "order": "C",
+            "shape": [
+                1
+            ],
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/var/_index/.zattrs": {
+            "encoding-type": "string-array",
+            "encoding-version": "0.2.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/varm/.zattrs": {
+            "encoding-type": "dict",
+            "encoding-version": "0.1.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/varm/.zgroup": {
+            "zarr_format": 2
+        },
+        "tables/P132666-HE-0_grid_point_patch/varp/.zattrs": {
+            "encoding-type": "dict",
+            "encoding-version": "0.1.0"
+        },
+        "tables/P132666-HE-0_grid_point_patch/varp/.zgroup": {
+            "zarr_format": 2
+        }
+    },
+    "zarr_consolidated_format": 1
+}

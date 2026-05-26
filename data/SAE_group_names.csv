@@ -1,0 +1,30 @@
+,group_name
+1,Pleura
+2,Respiratory epithelium
+3,Blood vessel intima/media
+4,Blood vessel adventitia
+5,Atelectatic lung parenchyma
+6,Interstitial inflammation
+7,Transitional zone
+8,Intra-alveolar macrophages
+9,Capillary congestion
+10,Normal alveolar wall
+11,AW with interstitial fibrosis
+12,AW with interstitial inflammation
+13,AW with intra-alveolar RBCs
+14,Small BV (arteriole or venule)
+15,Anthracosis
+16,Lymphoid aggregate
+17,Loose connective tissue
+18,Dense collagenous tissue
+19,Elastosis
+20,Dense collagenous tissue with inflammation
+21,Multinucleated giant cell
+22,Epithelioid histiocytes
+23,Fibrotic wall of granuloma
+24,Fibrolymphoplasmacytic wall of granuloma
+25,Periphery of granuloma necrotic core
+26,Center of granuloma necrotic core
+27,Red blood cells
+28,Blank space (or debris)
+29,Miscellaneous
