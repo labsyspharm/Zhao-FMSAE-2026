@@ -5,15 +5,21 @@ description = "TODO"
 authors = [{ name = "Ziyuan Zhao", email = "ziyuanzhao@fas.harvard.edu" }]
 readme = "README.md"
 license = { text = "MIT" }
+requires-python = '>=3.14'
 dependencies = [
+    "anndata",
+    "ipywidgets>=8.1.8",
+    "joblib",
     "matplotlib",
-    "zarr",
+    "notebook",
     "numpy",
-    "tqdm",
     "pandas",
+    "scikit-learn>=1.6",
+    "scipy",
+    "spatialdata",
+    "spatialdata-plot",
     "torch",
-    "spatialdata[extra]==0.4.0",
-    "notebook>=7.5.6",
+    "tqdm",
 ]
 
 [tool.setuptools.packages.find]
@@ -23,12 +29,10 @@ namespaces = false
 requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
-[tool.uv.sources]
-torch = { index = "pytorch" }
-
 [[tool.uv.index]]
 name = "pytorch"
 url = "https://download.pytorch.org/whl/cpu"
+explicit = true
 
-[tool.uv]
-index-strategy = "unsafe-best-match"
+[tool.uv.sources]
+torch = { index = "pytorch" }
