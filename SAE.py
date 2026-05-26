@@ -193,7 +193,7 @@ class SparseAutoencoder(TransformerMixin, BaseEstimator):
                  expansion_factor: int = 64,
                  batch_size: int = 2048,
                  num_steps: int = 200000,
-                 initial_lambda: float = 1e-6,  # Start very small
+                 initial_lambda: float = 1e-6,
                  final_lambda: int = 1,
                  target_sparsity: float = 0.001,
                  learning_rate=5e-5,
@@ -203,67 +203,91 @@ class SparseAutoencoder(TransformerMixin, BaseEstimator):
         self.num_steps = num_steps
         self.initial_lambda = initial_lambda
         self.final_lambda = final_lambda
-        # self.epsilon = epsilon
         self.learning_rate = learning_rate
         self.target_sparsity = target_sparsity
         self.random_state = random_state
+        
+        self.active_features_ = None 
+        self.is_pruned_ = False
 
-    def fit(self, X, y=None, 
-            verbose: int | bool = False):
+    def fit(self, X, y=None, verbose: int | bool = False):
         self.random_state_ = check_random_state(self.random_state)
         X = validate_data(self, X, accept_sparse=False)
-        assert len(X.shape) == 2 # expect X shape = B x d_emb 
         self.embed_dim_ = X.shape[1] * self.expansion_factor
-        self.model_ = SimpleAutoencoder(input_dim=X.shape[1], 
-                                        expansion_factor=self.expansion_factor)
+        self.model_ = SimpleAutoencoder(input_dim=X.shape[1], expansion_factor=self.expansion_factor)
+        
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
         torch.manual_seed(self.random_state_.random(1))
         self.scale_factor_, self._training_log = train_simple_sae(
-            model=self.model_,
-            embeddings=X,
-            device=device,
-            batch_size=self.batch_size,
-            num_steps=self.num_steps,
-            initial_lambda=self.initial_lambda,
-            final_lambda=self.final_lambda,
-            target_sparsity=self.target_sparsity,
-            # epsilon=self.epsilon,
-            learning_rate=self.learning_rate, 
-            verbose=verbose
+            model=self.model_, embeddings=X, device=device, batch_size=self.batch_size,
+            num_steps=self.num_steps, initial_lambda=self.initial_lambda, final_lambda=self.final_lambda,
+            target_sparsity=self.target_sparsity, learning_rate=self.learning_rate, verbose=verbose
         )
-        return self
         
+        self.active_features_ = np.arange(self.embed_dim_)
+        return self
+
+    def prune_features(self, active_indices):
+        """
+        Physically slices the PyTorch layers to minimize serialization size.
+        Saves the active_indices map so we can project back to original dimensions later.
+        """
+        check_is_fitted(self)
+        
+        self.active_features_ = np.array(active_indices, dtype=np.int64)
+        self.is_pruned_ = True
+        
+        with torch.no_grad():
+            old_enc_w = self.model_.encoder.weight.data
+            old_enc_b = self.model_.encoder.bias.data
+            self.model_.encoder.weight = nn.Parameter(old_enc_w[self.active_features_, :])
+            self.model_.encoder.bias = nn.Parameter(old_enc_b[self.active_features_])
+            
+            old_dec_w = self.model_.decoder.weight.data
+            self.model_.decoder.weight = nn.Parameter(old_dec_w[:, self.active_features_])
+            
+            self.model_.hidden_dim = len(self.active_features_)
+
     def transform(self, X, column_keep_indices=None, device=None):
         check_is_fitted(self)
         X = validate_data(self, X, accept_sparse=False, reset=False)
         if device is None:
             device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.model_.to(device)
-        # X may be large so we need to use dataloader
+        
         dataset = TensorDataset(torch.tensor(X, dtype=torch.float32) * self.scale_factor_)
         dataloader = DataLoader(dataset, batch_size=self.batch_size, shuffle=False)
-        rows = []
-        cols = []
-        vals = []
+        rows, cols, vals = [], [], []
+        
         with torch.no_grad():
             for idx, batch in enumerate(tqdm(dataloader)):
                 _, X_ = self.model_.forward(batch[0].to(device))
+                
                 if column_keep_indices is not None:
                     X_ = X_[:, column_keep_indices]
+                    
                 arr = X_.to_sparse().cpu()
                 row_ind, col_ind = arr.indices().numpy()
                 value = arr.values().numpy()
+                
                 rows.append(row_ind + idx * self.batch_size)
+                
+                if self.is_pruned_ and column_keep_indices is None:
+                    col_ind = self.active_features_[col_ind]
+                elif self.is_pruned_ and column_keep_indices is not None:
+                    actual_mapped_indices = self.active_features_[column_keep_indices]
+                    col_ind = actual_mapped_indices[col_ind]
+                
                 cols.append(col_ind)
                 vals.append(value)
+                
         data = np.concatenate(vals)
         row_ind, col_ind = np.concatenate(rows), np.concatenate(cols)
-        n_features = self.embed_dim_ if column_keep_indices is None else len(column_keep_indices)
-        X_sparse = sp.csr_matrix((data, (row_ind, col_ind)),
-                                    shape=(X.shape[0], n_features))
+        
+        if column_keep_indices is not None:
+            n_features = len(column_keep_indices)
+        else:
+            n_features = self.embed_dim_ 
+            
+        X_sparse = sp.csr_matrix((data, (row_ind, col_ind)), shape=(X.shape[0], n_features))
         return X_sparse
-    
-    # def load(self, file_path):
-    #     device = 'cuda' if torch.cuda.is_available() else 'cpu'
-    #     self.model_.load_state_dict(torch.load(file_path),
-    #                                 map_location=torch.device(device))
